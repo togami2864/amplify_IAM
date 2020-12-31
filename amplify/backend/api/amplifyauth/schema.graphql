@@ -1,0 +1,7 @@
+type Todo
+  @model(mutations: { create: "createTodo" }, subscriptions: null)
+  @auth(rules: [{ allow: public, provider: iam }]) {
+  id: ID!
+  name: String!
+  description: String
+}
